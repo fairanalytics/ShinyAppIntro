@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Build a reactive web Application using R Shiny</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Fair Analytics" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Build a reactive web Application using R Shiny
+## ⚔️ Hands-on Training
+### Fair Analytics
+
+---
+
+
+
+
+
+
+
+## Who are we 
+
+
+[**Fair Analytics**](https://www.fairanalytics.net/) :  Industry and Business oriented trainings using R programming language. 
+
+.center[
+![](./images/r_programming.jpg)
+]
+
+
+
+
+---
+##  Inspiring Examples
+
+* [Shiny Gallery](https://shiny.rstudio.com/gallery/#user-showcase)
+
+* [Covid Tracker Dashboard](https://github.com/fairanalytics/CovidDashboard2021)
+
+.center[
+![](./images/shiny.png)
+]
+
+---
+## Required Tools   
+
+- Download R **[Windows](https://cran.r-project.org/bin/windows/base/),  [macOS](https://cran.r-project.org/bin/macosx/), [linux](https://cran.r-project.org/)**
+- Install R
+- IDE : Download Rstudio **[here](https://www.rstudio.com/products/rstudio/download/)**
+
+.center[
+![](./images/Rstudio.JPG)
+]
+
+
+---
+## Required packages 
+
+
+* **[library("shiny")]()** : Main package for reactive web application
+
+* **[library("readr")]()** : Import Data from csv/text files.
+
+* **[library("dplyr")]()** : Data manipulation and transformation
+
+*  **[library("ggplot")]()** : Data visualization
+
+*  **[library("rsconnect")]()** : Deploy your app on shiny server (for free)
+
+---
+## Deploy your Shiny App 
+
+* **[shinyapp.io](https://www.shinyapps.io/)**
+
+* **[Rstudio Server -commercial-](https://www.rstudio.com/products/shiny/shiny-server/)**
+
+* **[Heruko](https://elements.heroku.com/buildpacks/btubbs/heroku-buildpack-shiny)**
+
+* **Cloud : AWS, Azure, Digital Ocean**
+
+
+
+---
+## End-to-End : Entreprise Shiny Dashboards
+
+* [Saldae Analytics Platform](https://www.fairanalytics.net/portfolio/)
+.center[
+![](./images/SAP_overview.gif)
+]
+
+
+---
+## More R Trainings  
+
+- [Data Analysis using R](https://www.fairanalytics.net/trainings/2021/09/10/data-analysis-using-rintermediate/)
+
+- [Advanced Analytics and Artificial Intelligence](https://www.fairanalytics.net/trainings/2021/09/10/data-science-using-r-intermediate/)
+
+- [BI &amp; Smart Reporting : shiny &amp; rmakrdown](https://www.fairanalytics.net/trainings/2021/09/10/bi-and-web-analytics-using-rshiny-and-rmarkdown-advanced/) 
+
+- Automatization using R
+
+- Big Data and Cloud computing using R
+
+---
+## Useful links 
+
+* [rweekly](https://rweekly.org/)
+
+* [Rstudio Community](https://community.rstudio.com/)
+
+* [mastering shiny](https://mastering-shiny.org/)
+
+---
+## One more thing !  
+
+**https://www.menti.com/34kemrofbj**
+
+
+
+.center[
+![](./images/intr_to_shiny_27-12-2021_final_survey.png)
+]
+
+---
+# Thank You
+
+.center[
+![](./images/thankyou.jpg)
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
